@@ -1,0 +1,32 @@
+<h1>Lista De posts:</h1>
+<a href="/cad"><button type="button" class="btn btn-warning">Inserir novo post</button></a>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Conteudo</th>
+            <th colspan="2">Editar</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each posts}}
+
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{titulo}}</td>
+            <td>{{conteudo}}</td>
+            <td><a href="/deletar/{{id}}"><button type="button" class="btn btn-danger">Deletar</button></a></td>
+            <td><a href="/editar/{{id}}"><button type="button" class="btn btn-primary">Editar</button></a></td>
+
+        </tr>
+        {{/each}}
+
+
+
+    </tbody>
+</table>
